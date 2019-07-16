@@ -1578,7 +1578,7 @@ const carsJson = [
   }
 ]
 
-let CarsModel = require('../models/cars')
+// let CarsModel = require('../models/cars')
 
 for(var i = 0; i<carsJson.length; i++) {
   let cars = new CarsModel({
