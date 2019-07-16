@@ -1,0 +1,32 @@
+input[type="text"] {
+  border-radius: 0;
+  height: $formElementHeight;
+  transition: border-color, color, $transition-speed;
+  box-shadow: 0;
+  border-color: map-get($theme-colors, 'black');
+
+  &.disabled {
+    border-color: map-get($theme-colors, 'grey');
+    color: map-get($theme-colors, 'grey');
+    cursor: not-allowed;
+  }
+
+  &:not(&.disabled) {
+    cursor: default;
+    &:hover, &:focus {
+      outline: 0;
+      border-color: map-get($theme-colors, 'blue');
+      color: map-get($theme-colors, 'blue');
+    }
+  }
+
+  &.form-control {
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:disabled {
+      background: none;
+    }
+  }
+}

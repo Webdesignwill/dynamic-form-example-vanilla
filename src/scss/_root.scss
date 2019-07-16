@@ -1,0 +1,13 @@
+body, html {
+  background-color: map-get($theme-colors, 'white');
+}
+
+body {
+  font-family: $font-family-lato;
+  font-weight: 300;
+  color: map-get($theme-colors, 'black');
+
+  main {
+    min-height: 100vh;
+  }
+}

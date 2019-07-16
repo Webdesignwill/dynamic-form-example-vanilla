@@ -1,0 +1,14 @@
+@each $size in $font-size-map {
+
+  .font-size-#{nth($size, 1)} {
+    font-size: #{nth($size, 2)} !important;
+  }
+
+  @each $key, $breakpoint in $grid-breakpoints {
+    @include media-breakpoint-up($key) {
+      .font-size-#{$key}-#{nth($size, 1)} {
+        font-size: #{nth($size, 2)} !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.btn {
+  background: 0;
+  cursor: default;
+  transition: border-color, color, $transition-speed;
+  font-family: map-get($font-map, "museo-bold");
+  text-transform: uppercase;
+  height: $formElementHeight;
+  border-color: map-get($theme-colors, 'green');
+  color: map-get($theme-colors, 'green');
+
+  &:hover, &:focus {
+    outline: 0;
+    border-color: map-get($theme-colors, 'blue');
+    color: map-get($theme-colors, 'blue');
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    border-color: map-get($theme-colors, 'grey');
+    color: map-get($theme-colors, 'grey');
+  }
+}
+
+@each $key, $color in $theme-colors {
+  .btn-#{$key} {
+    @include button-variant(
+      map-get($theme-colors, $key),
+      map-get($theme-colors, $key)
+    );
+  }
+}

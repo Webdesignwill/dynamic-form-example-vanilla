@@ -1,0 +1,14 @@
+@each $font-size in $element-font-sizes {
+  #{nth($font-size, 1)} {
+    font-size: #{nth($font-size, 2)};
+  }
+}
+
+a {
+  color: map-get($theme-colors, 'white');
+  transition: color $transition-speed;
+  &:hover, &:active {
+    color: map-get($theme-colors, 'red');
+    text-decoration: none;
+  }
+}

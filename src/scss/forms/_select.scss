@@ -1,0 +1,53 @@
+.form-group {
+  .select-wrapper {
+    position: relative;
+
+    &:before {
+      content: "";
+      background: url("/assets/images/chevron-down-solid.svg") no-repeat center center;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      right: $spacing-3;
+      cursor: pointer;
+      color: map-get($theme-colors, 'white');
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  select {
+    transition: border-color, color, $transition-speed;
+    appearance: none;
+    border-radius: 0;
+    padding: $spacing-2 0 $spacing-2 $spacing-2;
+    cursor: pointer;
+    height: $formElementHeight;
+
+    &.disabled {
+      border-color: map-get($theme-colors, 'grey');
+      color: map-get($theme-colors, 'grey');
+      cursor: not-allowed;
+    }
+
+    &:not(&.disabled) {
+      border-color: map-get($theme-colors, 'black');
+      cursor: default;
+      &:hover, &:focus {
+        outline: 0;
+        border-color: map-get($theme-colors, 'blue');
+        color: map-get($theme-colors, 'blue');
+      }
+    }
+
+    &.form-control {
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:disabled {
+        background: none;
+      }
+    }
+  }
+}

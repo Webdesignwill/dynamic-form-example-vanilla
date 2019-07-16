@@ -1,0 +1,35 @@
+$size-array: (
+  '5' '10' '20' '30' '40' '50' '60' '70' '80' '90' '100' 'auto'
+);
+
+.max-width {
+  @each $size in $size-array {
+    &-#{$size} {
+      max-width: #{$size + "%"};
+    }
+
+    @each $key, $breakpoint in $grid-breakpoints {
+      @include media-breakpoint-up($key) {
+        &-#{$key}-#{$size} {
+          max-width: #{$size + "%"} !important;
+        }
+      }
+    }
+  }
+}
+
+.w {
+  @each $size in $size-array {
+    &-#{$size} {
+      width: #{$size + "%"};
+    }
+
+    @each $key, $breakpoint in $grid-breakpoints {
+      @include media-breakpoint-up($key) {
+        &-#{$key}-#{$size} {
+          width: #{$size + "%"} !important;
+        }
+      }
+    }
+  }
+}

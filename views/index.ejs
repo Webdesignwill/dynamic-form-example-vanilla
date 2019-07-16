@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="theme-default">
+
+<head>
+  <% include ./partials/head.ejs %>
+</head>
+
+<body class="p-3">
+  <main role="main" class="d-flex justify-content-center position-relative" data-component="application">
+    <form class="car-selection border-black w-100 w-md-50 position-absolute" action="#">
+      <header class="p-3 border-bottom-black">
+        <p class="mb-0 font-weight-bold">Buy a car</p>
+      </header>
+
+      <div class="p-3 border-bottom-black">
+        <div class="form-group">
+          <label for="email-input">Brand:</label>
+          <div class="select-wrapper">
+            <select class="form-control"
+              id="S1"
+              data-component="form-control"
+              name="brands"
+            >
+              <option value="0">- All Brands -</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email-input">Model:</label>
+          <div class="select-wrapper">
+            <select class="form-control disabled"
+              disabled="disabled"
+              id="S2"
+              data-component="form-control"
+              name="models"
+            >
+              <option value="0">- Select a brand first -</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="T">Keywords</label>
+          <input type="text"
+            data-component="form-control"
+            class="form-control"
+            name="keywords"
+            id="T"
+          >
+        </div>
+      </div>
+
+      <div class="p-3">
+        <button class="btn w-100 disabled"
+          name="submit"
+          data-component="form-control"
+          id="B"
+          type="submit"
+          disabled="disabled"
+        >
+          Search cars
+        </button>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+$border-positions: 'top' 'right' 'bottom' 'left';
+
+.border-radius {
+  border-radius: $borderRadius;
+
+  &-0 {
+    border-radius: 0;
+  }
+}
+
+@each $key, $color in $theme-colors {
+
+  .border-#{$key} {
+    border: 1px solid map-get($theme-colors, #{$key});
+  }
+
+  @each $position in $border-positions {
+    .border-#{$position}-#{$key} {
+      border-#{$position}: 1px solid map-get($theme-colors, #{$key});
+    }
+  }
+}

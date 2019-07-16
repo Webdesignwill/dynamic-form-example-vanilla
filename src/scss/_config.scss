@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+$font-family-lato: 'Lato', sans-serif;
+
+$font-map: (
+  "lato": $font-family-lato
+);
+
+$color-black: rgb(0,0,0) !default; // #000000
+$color-white: rgb(255,255,255) !default; // #FFFFFF
+$color-grey: rgb(180,180,180) !default;
+$color-dark: rgb(62,62,62) !default; // #3e3e3e
+$color-red: rgb(230,2,15) !default; // #E6020F
+$color-green: rgb(50,205,50) !default; // #32CD32
+$color-blue: rgb(55,150,185) !default; // #3796B9
+
+$theme-colors: (
+  "black": $color-black,
+  "white": $color-white,
+  "grey": $color-grey,
+  "dark": $color-dark,
+  "red": $color-red,
+  "green": $color-green,
+  "blue": $color-blue
+);
+
+$gridXs: 350px;
+$gridSm: 576px;
+$gridMd: 768px;
+$gridLg: 992px;
+$gridL: 1200px;
+$gridXl: 1600px;
+
+$grid-breakpoints: (
+  xs: $gridXs,
+  sm: $gridSm,
+  md: $gridMd,
+  lg: $gridLg,
+  l: $gridL,
+  xl: $gridXl,
+);
+
+$spacing-1: 0.25rem;
+$spacing-2: 0.5rem;
+$spacing-3: 1rem;
+$spacing-4: 1.5rem;
+$spacing-5: 3rem;
+
+$xs: $font-size-base * 0.8;
+$s: $font-size-base * 0.9;
+$sm: $font-size-base * 1.1;
+$md: $font-size-base * 1.6;
+$m: $font-size-base * 1.8;
+$lg: $font-size-base * 2.6;
+$xl: $font-size-base * 3.50;
+$xxl: $font-size-base * 4.7;
+
+$font-size-map: (
+  (auto): 'auto',
+  (xs): ($xs),
+  (s): ($s),
+  (sm): ($sm),
+  (md): ($md),
+  (m): ($m),
+  (lg): ($lg),
+  (xl): ($xl),
+  (xxl): ($xxl)
+);
+
+$element-font-sizes: (
+  (h1): ($xl),
+  (h2): ($lg),
+  (h3): ($m),
+  (h4): ($md),
+  (h5): ($sm),
+  (p): ($sm),
+  (small): ($xs),
+);
+
+$formElementHeight: 50px;
+$borderRadius: 5px;
+$darkenerPercentile: 10%;
+$transition-speed: .3s;

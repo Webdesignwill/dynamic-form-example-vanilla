@@ -1,0 +1,8 @@
+{
+  "name": "Marktplaats Test",
+  "description": "Marktplaats test site",
+  "repository": "https://github.com/Webdesignwill/marktplaats-test",
+  "logo": "",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
