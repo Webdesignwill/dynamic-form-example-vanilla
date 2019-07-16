@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "mongod --dbpath ./data | node index.js",
     "start:dev": "mongod --dbpath ./data | NODE_ENV=development node index.js | gulp"
   },
   "dependencies": {
