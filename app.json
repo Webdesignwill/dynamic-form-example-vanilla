@@ -1,7 +1,7 @@
 {
-  "name": "Marktplaats Test",
-  "description": "Marktplaats test site",
-  "repository": "https://github.com/Webdesignwill/marktplaats-test",
+  "name": "Dynamic Form",
+  "description": "Vanilla dynamic form example",
+  "repository": "https://github.com/Webdesignwill/dynamic-form-example-vanilla",
   "logo": "",
   "keywords": ["node", "express", "heroku"],
   "image": "heroku/nodejs"
